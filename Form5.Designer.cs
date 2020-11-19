@@ -34,9 +34,9 @@ namespace firstApplication
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.custName = new System.Windows.Forms.TextBox();
+            this.custAddr = new System.Windows.Forms.RichTextBox();
+            this.custMobileNo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -90,27 +90,29 @@ namespace firstApplication
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 4;
             // 
-            // textBox2
+            // custName
             // 
-            this.textBox2.Location = new System.Drawing.Point(408, 205);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(292, 22);
-            this.textBox2.TabIndex = 5;
+            this.custName.Location = new System.Drawing.Point(408, 205);
+            this.custName.Name = "custName";
+            this.custName.Size = new System.Drawing.Size(292, 22);
+            this.custName.TabIndex = 5;
+            this.custName.TextChanged += new System.EventHandler(this.custName_TextChanged);
             // 
-            // richTextBox1
+            // custAddr
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(408, 251);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(292, 89);
-            this.richTextBox1.TabIndex = 8;
-            this.richTextBox1.Text = "";
+            this.custAddr.Location = new System.Drawing.Point(408, 251);
+            this.custAddr.Name = "custAddr";
+            this.custAddr.Size = new System.Drawing.Size(292, 89);
+            this.custAddr.TabIndex = 8;
+            this.custAddr.Text = "";
+            this.custAddr.TextChanged += new System.EventHandler(this.custAddr_TextChanged);
             // 
-            // textBox3
+            // custMobileNo
             // 
-            this.textBox3.Location = new System.Drawing.Point(408, 382);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(134, 22);
-            this.textBox3.TabIndex = 9;
+            this.custMobileNo.Location = new System.Drawing.Point(408, 382);
+            this.custMobileNo.Name = "custMobileNo";
+            this.custMobileNo.Size = new System.Drawing.Size(134, 22);
+            this.custMobileNo.TabIndex = 9;
             // 
             // label5
             // 
@@ -169,9 +171,9 @@ namespace firstApplication
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.custMobileNo);
+            this.Controls.Add(this.custAddr);
+            this.Controls.Add(this.custName);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -191,9 +193,9 @@ namespace firstApplication
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox custName;
+        private System.Windows.Forms.RichTextBox custAddr;
+        private System.Windows.Forms.TextBox custMobileNo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
