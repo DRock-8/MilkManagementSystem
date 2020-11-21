@@ -32,23 +32,20 @@ namespace firstApplication
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.ttamt = new System.Windows.Forms.TextBox();
+            this.rate = new System.Windows.Forms.TextBox();
+            this.qty = new System.Windows.Forms.TextBox();
+            this.custName = new System.Windows.Forms.TextBox();
+            this.date = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.milkType = new System.Windows.Forms.ComboBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button3
@@ -67,7 +64,7 @@ namespace firstApplication
             // 
             this.button2.BackColor = System.Drawing.Color.Aqua;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(523, 460);
+            this.button2.Location = new System.Drawing.Point(580, 427);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(134, 43);
             this.button2.TabIndex = 58;
@@ -79,7 +76,7 @@ namespace firstApplication
             // 
             this.button1.BackColor = System.Drawing.Color.Aqua;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(323, 460);
+            this.button1.Location = new System.Drawing.Point(399, 427);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 43);
             this.button1.TabIndex = 57;
@@ -87,67 +84,51 @@ namespace firstApplication
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox7
+            // ttamt
             // 
-            this.textBox7.Location = new System.Drawing.Point(702, 398);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 56;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.ttamt.Location = new System.Drawing.Point(706, 337);
+            this.ttamt.Name = "ttamt";
+            this.ttamt.Size = new System.Drawing.Size(100, 22);
+            this.ttamt.TabIndex = 56;
+            this.ttamt.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
-            // textBox6
+            // rate
             // 
-            this.textBox6.Location = new System.Drawing.Point(393, 400);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 55;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.rate.Location = new System.Drawing.Point(393, 339);
+            this.rate.Name = "rate";
+            this.rate.Size = new System.Drawing.Size(104, 22);
+            this.rate.TabIndex = 55;
+            this.rate.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
-            // textBox4
+            // qty
             // 
-            this.textBox4.Location = new System.Drawing.Point(702, 352);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 53;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.qty.Location = new System.Drawing.Point(706, 291);
+            this.qty.Name = "qty";
+            this.qty.Size = new System.Drawing.Size(100, 22);
+            this.qty.TabIndex = 53;
+            this.qty.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox3
+            // custName
             // 
-            this.textBox3.Location = new System.Drawing.Point(393, 294);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(284, 22);
-            this.textBox3.TabIndex = 52;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.custName.Location = new System.Drawing.Point(393, 233);
+            this.custName.Name = "custName";
+            this.custName.Size = new System.Drawing.Size(288, 22);
+            this.custName.TabIndex = 52;
+            this.custName.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox2
+            // date
             // 
-            this.textBox2.Location = new System.Drawing.Point(393, 246);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(75, 22);
-            this.textBox2.TabIndex = 51;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(393, 211);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(75, 22);
-            this.textBox1.TabIndex = 50;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(393, 164);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 49;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.date.Location = new System.Drawing.Point(393, 164);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(200, 22);
+            this.date.TabIndex = 49;
+            this.date.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(561, 398);
+            this.label9.Location = new System.Drawing.Point(565, 337);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(122, 24);
             this.label9.TabIndex = 48;
@@ -158,7 +139,7 @@ namespace firstApplication
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(561, 352);
+            this.label8.Location = new System.Drawing.Point(565, 291);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 24);
             this.label8.TabIndex = 47;
@@ -169,7 +150,7 @@ namespace firstApplication
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(192, 398);
+            this.label7.Location = new System.Drawing.Point(196, 337);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 24);
             this.label7.TabIndex = 46;
@@ -180,7 +161,7 @@ namespace firstApplication
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(192, 352);
+            this.label6.Location = new System.Drawing.Point(196, 291);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 24);
             this.label6.TabIndex = 45;
@@ -191,34 +172,12 @@ namespace firstApplication
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(192, 292);
+            this.label5.Location = new System.Drawing.Point(196, 231);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(147, 24);
             this.label5.TabIndex = 44;
             this.label5.Text = "Customer Name";
             this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(192, 246);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 24);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "Customer Id";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(192, 211);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 24);
-            this.label3.TabIndex = 42;
-            this.label3.Text = "Sell Id";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -242,41 +201,50 @@ namespace firstApplication
             this.label1.Text = "SELL";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // comboBox1
+            // milkType
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.milkType.FormattingEnabled = true;
+            this.milkType.Items.AddRange(new object[] {
             "COW",
             "BUFFALO"});
-            this.comboBox1.Location = new System.Drawing.Point(389, 360);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 60;
+            this.milkType.Location = new System.Drawing.Point(393, 299);
+            this.milkType.Name = "milkType";
+            this.milkType.Size = new System.Drawing.Size(121, 24);
+            this.milkType.TabIndex = 60;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Cyan;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(263, 427);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(92, 43);
+            this.button4.TabIndex = 61;
+            this.button4.Text = "BACK";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Yellow;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1323, 573);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.milkType);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.ttamt);
+            this.Controls.Add(this.rate);
+            this.Controls.Add(this.qty);
+            this.Controls.Add(this.custName);
+            this.Controls.Add(this.date);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form9";
@@ -292,22 +260,19 @@ namespace firstApplication
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox ttamt;
+        private System.Windows.Forms.TextBox rate;
+        private System.Windows.Forms.TextBox qty;
+        private System.Windows.Forms.TextBox custName;
+        private System.Windows.Forms.DateTimePicker date;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox milkType;
+        private System.Windows.Forms.Button button4;
     }
 }

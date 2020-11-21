@@ -26,7 +26,7 @@ namespace firstApplication
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form11 adminObj = new Form11();
+            Form14 adminObj = new Form14();
             adminObj.Show();
             this.Hide();
         }
@@ -34,6 +34,13 @@ namespace firstApplication
         private void Form10_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form15 adminObj = new Form15();
+            adminObj.Show();
+            this.Hide();
         }
     }
 }

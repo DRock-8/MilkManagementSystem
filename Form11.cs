@@ -28,5 +28,12 @@ namespace firstApplication
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form7 adminObj = new Form7();
+            adminObj.Show();
+            this.Hide();
+        }
     }
 }

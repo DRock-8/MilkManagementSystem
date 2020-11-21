@@ -46,29 +46,32 @@ namespace firstApplication
 
             // MessageBox.Show(name + password);
 
-            HOME obj1 = new HOME();
-            obj1.Show();
-            this.Hide();
+            
+
+            if (defaultUsername == name && defaultPassword == password)
+            {
+                HOME obj1 = new HOME();
+                obj1.Show();
+                this.Hide();
 
 
-            //if (defaultUsername == name && defaultPassword == password)
-            //{
-            //    MessageBox.Show(name + password);
-            //    Form3 obj1 = new Form3();
-            //    obj1.Show();
-            //    this.Hide();
-
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Invalid credentials");
-            //}
+            }
+            else
+            {
+                MessageBox.Show("Invalid credentials");
+            }
 
         }
 
         private void username_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            passinput.Clear();
+            username.Clear();
         }
     }
 }

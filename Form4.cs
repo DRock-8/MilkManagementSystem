@@ -19,7 +19,7 @@ namespace firstApplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form5 adminObj = new Form5();
+            Form12 adminObj = new Form12();
             adminObj.Show();
             this.Hide();
         }

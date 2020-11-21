@@ -26,7 +26,28 @@ namespace firstApplication
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Form5 adminObj = new Form5();
+            adminObj.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
             Form4 adminObj = new Form4();
+            adminObj.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form13 adminObj = new Form13();
+            adminObj.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form16 adminObj = new Form16();
             adminObj.Show();
             this.Hide();
         }

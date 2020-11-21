@@ -72,5 +72,19 @@ namespace firstApplication
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form12 adminObj = new Form12();
+            adminObj.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            custName.Clear();
+            custMobileNo.Clear();
+            custAddr.Clear();
+        }
     }
 }

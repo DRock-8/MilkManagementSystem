@@ -48,11 +48,11 @@ namespace firstApplication
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Aqua;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(358, 235);
+            this.button1.Location = new System.Drawing.Point(326, 235);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 52);
+            this.button1.Size = new System.Drawing.Size(179, 52);
             this.button1.TabIndex = 1;
             this.button1.Text = "PURCHASE";
             this.button1.UseVisualStyleBackColor = false;
@@ -61,11 +61,11 @@ namespace firstApplication
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Aqua;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(596, 234);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 53);
+            this.button2.Size = new System.Drawing.Size(173, 53);
             this.button2.TabIndex = 2;
             this.button2.Text = "SELL";
             this.button2.UseVisualStyleBackColor = false;
@@ -88,7 +88,7 @@ namespace firstApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Yellow;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1105, 526);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

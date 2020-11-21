@@ -29,11 +29,9 @@ namespace firstApplication
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.custName = new System.Windows.Forms.TextBox();
             this.custAddr = new System.Windows.Forms.RichTextBox();
             this.custMobileNo = new System.Windows.Forms.TextBox();
@@ -41,23 +39,14 @@ namespace firstApplication
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(232, 141);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(232, 196);
+            this.label2.Location = new System.Drawing.Point(232, 170);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 24);
             this.label2.TabIndex = 1;
@@ -67,7 +56,7 @@ namespace firstApplication
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(232, 242);
+            this.label3.Location = new System.Drawing.Point(232, 249);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 24);
             this.label3.TabIndex = 2;
@@ -83,16 +72,9 @@ namespace firstApplication
             this.label4.TabIndex = 3;
             this.label4.Text = "Mobile No.";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(408, 152);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 4;
-            // 
             // custName
             // 
-            this.custName.Location = new System.Drawing.Point(408, 205);
+            this.custName.Location = new System.Drawing.Point(408, 170);
             this.custName.Name = "custName";
             this.custName.Size = new System.Drawing.Size(292, 22);
             this.custName.TabIndex = 5;
@@ -100,7 +82,7 @@ namespace firstApplication
             // 
             // custAddr
             // 
-            this.custAddr.Location = new System.Drawing.Point(408, 251);
+            this.custAddr.Location = new System.Drawing.Point(408, 249);
             this.custAddr.Name = "custAddr";
             this.custAddr.Size = new System.Drawing.Size(292, 89);
             this.custAddr.TabIndex = 8;
@@ -109,7 +91,7 @@ namespace firstApplication
             // 
             // custMobileNo
             // 
-            this.custMobileNo.Location = new System.Drawing.Point(408, 382);
+            this.custMobileNo.Location = new System.Drawing.Point(408, 375);
             this.custMobileNo.Name = "custMobileNo";
             this.custMobileNo.Size = new System.Drawing.Size(134, 22);
             this.custMobileNo.TabIndex = 9;
@@ -148,6 +130,7 @@ namespace firstApplication
             this.button2.TabIndex = 12;
             this.button2.Text = "RESET";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -161,12 +144,25 @@ namespace firstApplication
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Cyan;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(157, 37);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 39);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "BACK";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Yellow;
             this.ClientSize = new System.Drawing.Size(1014, 526);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -174,11 +170,9 @@ namespace firstApplication
             this.Controls.Add(this.custMobileNo);
             this.Controls.Add(this.custAddr);
             this.Controls.Add(this.custName);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "Form5";
             this.Text = "Form5";
             this.ResumeLayout(false);
@@ -187,12 +181,9 @@ namespace firstApplication
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox custName;
         private System.Windows.Forms.RichTextBox custAddr;
         private System.Windows.Forms.TextBox custMobileNo;
@@ -200,5 +191,6 @@ namespace firstApplication
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

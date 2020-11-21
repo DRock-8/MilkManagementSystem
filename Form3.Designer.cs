@@ -41,7 +41,7 @@ namespace firstApplication
             this.adminBtn.BackColor = System.Drawing.Color.Yellow;
             this.adminBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminBtn.Location = new System.Drawing.Point(228, 380);
-            this.adminBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.adminBtn.Margin = new System.Windows.Forms.Padding(4);
             this.adminBtn.Name = "adminBtn";
             this.adminBtn.Size = new System.Drawing.Size(213, 69);
             this.adminBtn.TabIndex = 1;
@@ -54,7 +54,7 @@ namespace firstApplication
             this.transactionBtn.BackColor = System.Drawing.Color.Yellow;
             this.transactionBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transactionBtn.Location = new System.Drawing.Point(510, 380);
-            this.transactionBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.transactionBtn.Margin = new System.Windows.Forms.Padding(4);
             this.transactionBtn.Name = "transactionBtn";
             this.transactionBtn.Size = new System.Drawing.Size(234, 69);
             this.transactionBtn.TabIndex = 2;
@@ -67,7 +67,7 @@ namespace firstApplication
             this.reportBtn.BackColor = System.Drawing.Color.Yellow;
             this.reportBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportBtn.Location = new System.Drawing.Point(832, 380);
-            this.reportBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reportBtn.Margin = new System.Windows.Forms.Padding(4);
             this.reportBtn.Name = "reportBtn";
             this.reportBtn.Size = new System.Drawing.Size(206, 69);
             this.reportBtn.TabIndex = 3;
@@ -78,7 +78,7 @@ namespace firstApplication
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Yellow;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(526, 135);
             this.label1.Name = "label1";
@@ -98,7 +98,7 @@ namespace firstApplication
             this.Controls.Add(this.adminBtn);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Blue;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HOME";
             this.Text = "HOME";
             this.Load += new System.EventHandler(this.Form3_Load);

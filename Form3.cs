@@ -20,7 +20,7 @@ namespace firstApplication
         private void adminBtn_Click(object sender, EventArgs e)
         {
 
-            Form4 adminObj = new Form4();
+            Form12 adminObj = new Form12();
             adminObj.Show();
             this.Hide();
         }

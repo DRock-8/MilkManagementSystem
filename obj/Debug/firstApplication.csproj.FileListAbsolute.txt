@@ -43,3 +43,7 @@ C:\Users\deepa\source\repos\firstApplication\firstApplication\bin\Debug\System.M
 C:\Users\deepa\source\repos\firstApplication\firstApplication\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\deepa\source\repos\firstApplication\firstApplication\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\deepa\source\repos\firstApplication\firstApplication\obj\Debug\firstApplication.csproj.CopyComplete
+C:\Users\deepa\source\repos\firstApplication\firstApplication\obj\Debug\firstApplication.Form13.resources
+C:\Users\deepa\source\repos\firstApplication\firstApplication\obj\Debug\firstApplication.Form14.resources
+C:\Users\deepa\source\repos\firstApplication\firstApplication\obj\Debug\firstApplication.Form15.resources
+C:\Users\deepa\source\repos\firstApplication\firstApplication\obj\Debug\firstApplication.Form16.resources
