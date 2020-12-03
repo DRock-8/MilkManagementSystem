@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using System.Windows.Forms;
 
 
 namespace firstApplication
@@ -32,7 +31,9 @@ namespace firstApplication
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            custName.Clear();
+            addr.Clear();
+            mobileNo.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -72,6 +73,13 @@ namespace firstApplication
                 rdr.Close();
                 cnn.Close();
                 MessageBox.Show("Customer details updated successfully");
+                custName.Clear();
+                addr.Clear();
+                mobileNo.Clear();
+
+                Form12 adminObj = new Form12();
+                adminObj.Show();
+                this.Hide();
             }
             catch (Exception ex)
             {

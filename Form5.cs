@@ -56,6 +56,10 @@ namespace firstApplication
                 custName.Clear();
                 custMobileNo.Clear();
                 custAddr.Clear();
+
+                Form12 adminObj = new Form12();
+                adminObj.Show();
+                this.Hide();
             }
             catch (Exception ex)
             {
@@ -85,6 +89,11 @@ namespace firstApplication
             custName.Clear();
             custMobileNo.Clear();
             custAddr.Clear();
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

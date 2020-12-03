@@ -23,6 +23,8 @@ namespace firstApplication
             Form12 adminObj = new Form12();
             adminObj.Show();
             this.Hide();
+
+           
         }
 
         private void transactionBtn_Click(object sender, EventArgs e)
@@ -47,6 +49,14 @@ namespace firstApplication
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form4 adminObj = new Form4();
+            adminObj.Show();
+            this.Hide();
+           
         }
     }
 }

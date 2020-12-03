@@ -42,12 +42,12 @@ namespace firstApplication
             this.Hide();
         }
 
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
             String fromdate = fromDate.Text;
             String todate = toDate.Text;
-            // String custmob = mobileNo.Text;
+            String Search = search.Text;
 
             string connetionString = null;
             MySqlConnection cnn;
@@ -57,7 +57,10 @@ namespace firstApplication
             {
                 cnn.Open();
 
-                string sql = "select * from purchase where date between "+'"' +fromdate +'"' + "and" + '"'+ todate +'"';
+              //  string sql = "select * from purchase where date between " +'"' + fromdate +" and "+'"'+ todate';
+                string sql = "select * from purchase where date between '"+ fromdate + "' and '"+ todate + "'";
+
+
 
                 Console.WriteLine(sql);
                 MySqlCommand cmd = new MySqlCommand(sql, cnn);
@@ -69,7 +72,7 @@ namespace firstApplication
 
                 rdr.Close();
                 cnn.Close();
-               // MessageBox.Show("Customer details updated successfully");
+                
             }
             catch (Exception ex)
             {
@@ -99,7 +102,45 @@ namespace firstApplication
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
+        }
+
+        private void search_TextChanged(object sender, EventArgs e)
+        {
+            String fromdate = fromDate.Text;
+            String todate = toDate.Text;
+            String Search = search.Text;
+
+            string connetionString = null;
+            MySqlConnection cnn;
+            connetionString = "server=localhost;database=milk;uid=root;pwd=1234;";
+            cnn = new MySqlConnection(connetionString);
+            try
+            {
+                cnn.Open();
+                string sql = "select * from purchase where date between '" + fromdate + "' and '" + todate + "' and name='" + Search + "'";
+
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, cnn);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+
+                DataTable dt = new DataTable();
+                dt.Load(rdr);
+                dataGridView1.DataSource = dt;
+
+                rdr.Close();
+                cnn.Close();
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }

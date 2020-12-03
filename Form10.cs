@@ -42,5 +42,19 @@ namespace firstApplication
             adminObj.Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form6 adminObj = new Form6();
+            adminObj.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form17 adminObj = new Form17();
+            adminObj.Show();
+            this.Hide();
+        }
     }
 }

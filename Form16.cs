@@ -32,7 +32,7 @@ namespace firstApplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("ARE YOU SURE!!! YOU WANT TO DELETE");
             String custname = custName.Text;
             //String custaddr = addr.Text;
            // String custmob = mobileNo.Text;
@@ -53,7 +53,12 @@ namespace firstApplication
 
                 rdr.Close();
                 cnn.Close();
-                MessageBox.Show("Customer details updated successfully");
+                MessageBox.Show("Customer deleted successfully");
+                custName.Clear();
+
+                Form12 adminObj = new Form12();
+                adminObj.Show();
+                this.Hide();
             }
             catch (Exception ex)
             {
@@ -71,6 +76,11 @@ namespace firstApplication
             Form12 adminObj = new Form12();
             adminObj.Show();
             this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            custName.Clear();
         }
     }
 }

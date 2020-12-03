@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
 namespace firstApplication
@@ -33,10 +34,83 @@ namespace firstApplication
 
         private void button1_Click(object sender, EventArgs e)
         {
+            String fromdate = fromDate.Text;
+            String todate = toDate.Text;
+            String Search = search.Text;
+
+            string connetionString = null;
+            MySqlConnection cnn;
+            connetionString = "server=localhost;database=milk;uid=root;pwd=1234;";
+            cnn = new MySqlConnection(connetionString);
+            try
+            {
+                cnn.Open();
+
+                string sql = "select * from sell where date between '" + fromdate + "' and '" + todate + "'";
+
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, cnn);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+
+                DataTable dt = new DataTable();
+                dt.Load(rdr);
+                dataGridView1.DataSource = dt;
+
+                rdr.Close();
+                cnn.Close();
+                // MessageBox.Show("Customer details updated successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void Form15_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            String fromdate = fromDate.Text;
+            String todate = toDate.Text;
+            String Search = search.Text;
+
+            string connetionString = null;
+            MySqlConnection cnn;
+            connetionString = "server=localhost;database=milk;uid=root;pwd=1234;";
+            cnn = new MySqlConnection(connetionString);
+            try
+            {
+                cnn.Open();
+
+                string sql = "select * from sell where date between '" + fromdate + "' and '" + todate + "' and name='" + Search + "'";
 
 
 
-            this.Hide();
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, cnn);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+
+                DataTable dt = new DataTable();
+                dt.Load(rdr);
+                dataGridView1.DataSource = dt;
+
+                rdr.Close();
+                cnn.Close();
+                // MessageBox.Show("Customer details updated successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

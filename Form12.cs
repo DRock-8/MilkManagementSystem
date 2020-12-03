@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
 namespace firstApplication
@@ -15,6 +16,32 @@ namespace firstApplication
         public Form12()
         {
             InitializeComponent();
+            string connetionString = null;
+            MySqlConnection cnn;
+            connetionString = "server=localhost;database=milk;uid=root;pwd=1234;";
+            cnn = new MySqlConnection(connetionString);
+            try
+            {
+                cnn.Open();
+
+                string sql = "select * from customer ";
+
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, cnn);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+
+                DataTable dt = new DataTable();
+                dt.Load(rdr);
+                dataGridView1.DataSource = dt;
+
+                rdr.Close();
+                cnn.Close();
+                // MessageBox.Show("Customer details updated successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -50,6 +77,43 @@ namespace firstApplication
             Form16 adminObj = new Form16();
             adminObj.Show();
             this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void search_TextChanged(object sender, EventArgs e)
+        {
+            String Search = search.Text;
+
+            string connetionString = null;
+            MySqlConnection cnn;
+            connetionString = "server=localhost;database=milk;uid=root;pwd=1234;";
+            cnn = new MySqlConnection(connetionString);
+            try
+            {
+                cnn.Open();
+
+                string sql = "select * from customer where name like'" + Search + "%'";
+
+                Console.WriteLine(sql);
+                MySqlCommand cmd = new MySqlCommand(sql, cnn);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+
+                DataTable dt = new DataTable();
+                dt.Load(rdr);
+                dataGridView1.DataSource = dt;
+
+                rdr.Close();
+                cnn.Close();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
